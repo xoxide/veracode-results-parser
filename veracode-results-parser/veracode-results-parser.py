@@ -25,7 +25,7 @@ def main():
         remote_info = api_request(http_params)
 
         if remote_info['status'] == 'Results Ready':
-            print('Ready to Scan!')
+            print('Results Ready!')
             scan_ready = True
 
             http_params['schema'] = schemas.get('detailed_report')
