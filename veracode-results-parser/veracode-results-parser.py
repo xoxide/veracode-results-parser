@@ -41,7 +41,7 @@ def main():
                 print('Build Passed!')
 
         else:
-            print('Not Ready to Scan!')
+            print('Scan not finished!')
             time.sleep(300)
 
 
