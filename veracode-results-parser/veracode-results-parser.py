@@ -153,15 +153,14 @@ def parse_build_info(build_info_xml):
 def parse_detailed_report(detailed_report_xml):
     sev4flaws = 0
     sev5flaws = 0
-
     modules = detailed_report_xml.find('.//{https://www.veracode.com/schema/reports/export/1.0}modules')
     for module in modules:
-        sev4flaws = module.get('numflawssev4')
-        sev5flaws = module.get('numflawssev5')
+        sev4flaws = sev4flaws + int(module.get('numflawssev4'))
+        sev5flaws = sev5flaws + int(module.get('numflawssev5'))
 
     sca_vulns = detailed_report_xml.find('.//{https://www.veracode.com/schema/reports/export/1.0}software_composition_analysis').get('components_violated_policy')
 
-    detailed_report = {'high_flaws': int(sev4flaws), 'very_high_flaws': int(sev5flaws), 'sca_vulns': int(sca_vulns)}
+    detailed_report = {'high_flaws': sev4flaws, 'very_high_flaws': sev5flaws, 'sca_vulns': int(sca_vulns)}
 
     return detailed_report
 
