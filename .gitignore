@@ -114,3 +114,5 @@ dist
 .idea
 .eclipse
 .vscode
+
+.DS_Store

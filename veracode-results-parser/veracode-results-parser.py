@@ -128,7 +128,7 @@ def get_local_build_info(schema):
         buildinfo_xml = buildinfo_xml.getroot()
         buildinfo = parse_build_info(buildinfo_xml)
     except IOError:
-        print('Invalid File Local Build File')
+        print('Invalid Local Build File')
         sys.exit(1)
     except XMLSyntaxError:
         print('XML Syntax Error ')
