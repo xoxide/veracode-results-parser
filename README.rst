@@ -144,7 +144,7 @@ To install veracode-results-parser, do:
 
 .. code-block:: console
 
-  git clone https://github.com/xoxide/veracode-results-parser.git
+  git clone https://github.com/cory-imel/veracode-results-parser.git
   cd veracode-results-parser
   pip install .
 
