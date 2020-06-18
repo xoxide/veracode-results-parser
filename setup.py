@@ -13,7 +13,7 @@ setup(
     long_description=readme + '\n\n',
     author="Cory Imel",
     author_email='contact@coryimel.com',
-    url='https://github.com/xoxide/veracode-results-parser',
+    url='https://github.com/cory-imel/veracode-results-parser',
     packages=[
         'veracode-results-parser',
     ],
